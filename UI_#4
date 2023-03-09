@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by LEGO (LEGO) -->
+<FORM_DESCRIPTION xmlns="http://www.cognitive.ru/XML/2001/ctform" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.cognitive.ru/XML/2001/ctform  ctform.xsd" name="LLotOrder223">
+  <CONTENT_MODEL dfattchfiles="|Document|files" dfnumberdoc="|Document|�����_���������" key="Key">
+    <E name="Key" datatype="integer" index="false" default="&quot;1&quot;" view="invisible" displayname="����" dfprotected="true" />
+    <E name="��_���������_��������" datatype="text" index="true" displayname="�� ��������� ��������" dfhidden="true" view="invisible" />
+    <E name="���_���������_��������" datatype="text" index="true" displayname="��� ��������� ��������" dfhidden="true" view="invisible" />
+    <S name="Document" displayname="��������" use="LLot">
+      <E displayname="��������������� �����" name="���������������_�����" datatype="text(249)" index="true" dfprotected="true" dfhidden="true" />
+      <E displayname="������� ���. ������" name="�������_���������" datatype="dictionary(Prefix,text)" edit="combobox(Prefix)" index="true" view="invisible" dfprotected="false" />
+      <E displayname="���������� ���. �����" name="�����_���������" datatype="integer(+1..)" index="true" view="invisible" dfprotected="true" required="true" />
+      <E displayname="������� ���. ������" name="�������_���������" datatype="dictionary(Suffix,text)" edit="combobox(Suffix)" dfprotected="false" index="true" view="invisible" />
+      <E displayname="���� �����������" name="����_�����������" datatype="date" edit="" index="true" dfprotected="true" required="true" esp="false" default="nowdate()" />
+      <E displayname="��� ���������" name="���_���������" datatype="dictionary(VidDocNames,text)" index="true" dfprotected="true" required="false" edit="combobox" value="&quot;���&quot;" view="invisible" />
+      <E displayname="������� ����������" name="�������_����������" datatype="longtext" euflag="7" index="true" dfprotected="true" required="false" edit="multiline" awindex="true" default="&quot;���&quot;" view="invisible" value="&quot;���: &quot; +  ������������_���� +  &quot;, ������ �������: &quot; + ������_������� + &quot;, �������� ���� ����������:&quot; + ��������_����_���������� + &quot;, ��� &quot; + ���_�_��� " />
+      <E displayname="��� ������" name="���_������" datatype="text" index="false" view="invisible" dfprotected="true" dfhidden="true" esp="false" />
+      <E displayname="�� ������" name="��_������" datatype="integer" index="false" dfprotected="true" dfhidden="false" esp="false" view="invisible" />
+      <E displayname="�� ������������" name="��_������������" datatype="integer" index="false" dfprotected="true" dfhidden="false" esp="false" view="invisible" />
+      <E name="header" datatype="text" index="false" value="&quot;���&quot; " />
+      <E name="subheader" datatype="text" index="false" view="invisible" />
+      <E name="������" datatype="text" index="true" edit="textbox" required="true" default="&quot;���������� ����&quot; " />
+      <E displayname="���� 1" name="����_1" datatype="longtext" index="true" />
+      <E displayname="���� 2" name="����_2" datatype="boolean" index="true" default="0" />
+      <E name="��_���������" datatype="integer" index="true" displayname="�� ���������" view="invisible" />
+      <E name="��_�������_�����" datatype="text" index="true" displayname="�� ������� �����" view="invisible" />
+      <E name="��_�_���" datatype="text" index="true" displayname="�� � ���" view="invisible" />
+      <E name="�����_���������" datatype="text" index="true" displayname="����� ���������" />
+      <E name="�����_����_�_���������" datatype="integer" index="true" displayname="����� ���� � ���������" />
+      <E name="�����_���������_�_���" datatype="text" index="true" displayname="����� ��������� � ���" />
+      <E name="�����_�����_�_���" datatype="text" index="true" displayname="����� ����� � ���" />
+      <E name="���������" datatype="boolean" index="true" default="0" />
+      <E name="��������_�_���" datatype="longtext" index="true" displayname="�������� � ���" required="false" awindex="true" euflag="7" requiredex=" ���_�_��� =&quot;&quot;" />
+      <E name="����������_�����������_����������" datatype="longtext" index="true" displayname="���������� ����������� ����������" required="false" awindex="true" euflag="7" />
+      <E name="��������_�������_���" datatype="boolean" index="true" default="0" displayname="�������� ������� ���" />
+      <E name="�������_��_�����������" datatype="boolean" index="true" displayname="������� �� �����������" default="0" helpstring="������� �� ����������� � ������������ � ������� 7 ������������� ������������� �� �� 11.12.2014 � 1352" />
+      <E name="�����������_����_����������" datatype="datetime" index="true" displayname="����������� ���� ����������" required="false" />
+      <E name="������_�������" datatype="dictionary(����������� ���������,text)@������������" index="true" displayname="������ �������" required="true" edit="textbox" dictpath="|[|Document|�����������_��������|�����������_��������]|������ �������" />
+      <E name="�������_�_�����������_�����" datatype="boolean" index="true" displayname="������� � ����������� �����" default="1" />
+      <E name="����_���������_��������������" datatype="date" index="true" displayname="���� ��������� ��������������" />
+      <E name="��������������_��������" datatype="longtext" index="true" displayname="�������������� ��������" awindex="true" euflag="7" />
+      <E name="�������������_��_���" datatype="boolean" index="true" displayname="������������� �� ���" default="0" helpstring="� ��������� ���������� ������� ����������� ���������� � ����������� � ���������� �������� �������������� (��������������) �� ����� ��������� ������ � �������� �������������������" />
+      <E name="���_�������" datatype="integer" index="true" displayname="��� �������" value="year(  ��������_����_����������_��������  )" />
+      <E name="��������_�������" datatype="longtext" index="true" displayname="�������� �������" dictpath="" awindex="true" euflag="7" required="false" />
+      <A name="����������_�������" displayname="���������� �������">
+        <S name="S1">
+          <E name="����������_���" datatype="dictionary(�����������,text)@���" index="true" displayname="���������� ���" dictpath="" />
+          <E name="����������_���" datatype="dictionary(�����������,text)@���" index="true" displayname="���������� ���" dictpath="" />
+          <E name="����������_���" datatype="boolean" index="true" displayname="���������� ���" default="0" helpstring="�������� ��������� � ��������� ������ � �������� �������������������" />
+          <E name="����������" datatype="dictionary(�����������,text)@�����������" index="true" displayname="" dictpath="" view="invisible" />
+          <E name="����������_������������" datatype="longtext" index="true" displayname="���������� ������������" required="false" dictpath="" edit="textbox" />
+          <E name="����������_����" datatype="text" index="true" displayname="���������� ����" view="invisible" />
+          <E name="����������_���" datatype="text" index="true" displayname="���������� ���" view="invisible" />
+          <E name="����������_���_���" datatype="text" index="true" displayname="���������� ��� ���" view="invisible" />
+          <E name="�����������_����_�������_�_���" datatype="money" index="true" displayname="����������� ���� ������� � ���" />
+          <E name="�����������_����_�������_���_���" datatype="money" index="true" displayname="����������� ���� ������� ��� ���" />
+          <E name="����������_����������" datatype="boolean" index="true" displayname="���������� ����������" />
+          <E name="����������_�����������������_�����" datatype="text" index="true" displayname="���������� ����������������� �����" />
+          <E name="����������_���_�����������������_�����" datatype="text" index="true" displayname="���������� ��� ����������������� �����" />
+          <E name="����������_������" datatype="text" index="true" displayname="���������� ������" />
+          <E name="����������_������_���" datatype="text" index="true" displayname="���������� ������ ���" view="invisible" />
+          <E name="����������_������" datatype="text" index="true" displayname="���������� ������" />
+          <E name="����������_������" datatype="text" index="true" displayname="���������� ������" />
+          <E name="����������_������_���" datatype="text" index="true" displayname="���������� ������ ���" />
+          <E name="����������_�������_��_�����" datatype="text" index="true" displayname="���������� ������� �� �����" />
+          <E name="����������_�����" datatype="text" index="true" displayname="���������� �����" />
+          <E name="����������_�����" datatype="text" index="true" displayname="���������� �����" />
+          <E name="����������_����������_�����" datatype="text" index="true" displayname="���������� ���������� �����" />
+          <E name="����������_�����" datatype="text" index="true" displayname="���������� �����" />
+          <E name="����������_���" datatype="text" index="true" displayname="���������� ���" />
+          <E name="����������_������" datatype="text" index="true" displayname="���������� ������" />
+          <E name="����������_����" datatype="text" index="true" displayname="���������� ����" />
+          <E name="����������_email" datatype="text" index="true" displayname="���������� email" />
+          <E name="����������_����_����������" datatype="date" index="true" displayname="���������� ���� ����������" />
+          <E name="����������_�������" datatype="text" index="true" displayname="���������� �������" />
+          <E name="����������_�����" datatype="text" index="true" displayname="���������� �����" />
+          <E name="����������_����" datatype="text" index="true" displayname="���������� ����" />
+          <E name="����������_�����������_�_���" datatype="boolean" index="true" displayname="���������� ����������� � ���" />
+          <E name="��������������_����������" datatype="boolean" index="true" displayname="�������������� ����������" />
+          <E name="����������_���������_������������" datatype="longtext" index="true" displayname="���������� ��������� ������������" />
+          <E name="����������_�����" datatype="text" index="true" displayname="���������� �����" />
+          <E name="����������_�����_������������" datatype="longtext" index="true" displayname="���������� ����� ������������" />
+          <E name="����������_���_����������" datatype="longtext" index="true" displayname="���������� ��� ����������" />
+          <E name="����������_������" datatype="text" index="true" displayname="���������� ������" />
+          <E name="����������_���_��_���" datatype="integer" index="true" displayname="���������� ��� �� ���" />
+          <E name="����������_���" datatype="text" index="true" displayname="���������� ���" />
+          <E name="����������_�������_������������" datatype="longtext" index="true" displayname="���������� ������� ������������" />
+          <E name="����������_���" datatype="boolean" index="true" displayname="���������� ���" />
+          <E name="����������_����������_����" datatype="text" index="true" displayname="���������� ���������� ����" />
+          <E name="����������_���������_���" datatype="text" index="true" displayname="���������� ��������� ���" />
+        </S>
+      </A>
+      <E name="�����������_������" datatype="boolean" index="true" displayname="����������� ������" default="0" />
+      <E name="������_�����������_������" datatype="money" index="true" displayname="������ ����������� ������" requiredex=" �����������_������ " />
+      <E name="��������������_����������_��������" datatype="boolean" index="true" displayname="�������������� ���������� ��������" default="0" />
+      <E name="�����������_����������_��������" datatype="boolean" index="true" displayname="����������� ���������� ��������" default="0" />
+      <E name="������_�����������_��������" datatype="money" index="true" displayname="������ ����������� ��������" requiredex="�����������_����������_��������" />
+      <E name="�����������_��������_������" datatype="boolean" index="true" displayname="����������� �������� ������" default="0" />
+      <E name="������_�����������_��������_������" datatype="money" index="true" displayname="������ ����������� �������� ������" requiredex=" �����������_��������_������ " />
+      <E name="��������������_�����������_��������_������" datatype="dictionary(�������������� ����������� �������� ������(�������������� ����������� �������� ������),text)" index="true" displayname="�������������� ����������� �������� ������" dictpath="" requiredex=" �����������_��������_������ " />
+      <E name="��������������_�����������_��������_������_���" datatype="dictionary(�������������� ����������� �������� ������,text)@���" index="true" displayname="�������������� ����������� �������� ������ ���" view="invisible" dictpath="" />
+      <E name="�������_���������_��������������" datatype="text" index="true" displayname="������� ��������� ��������������" awindex="true" euflag="7" />
+      <E name="�����_���������_��_���" datatype="text" index="true" displayname="����� ��������� �� ���" />
+      <E name="��_�_���_���������" datatype="longtext" index="true" displayname="�� � ��� ���������" view="invisible" />
+      <E name="������������_����" datatype="longtext" index="true" displayname="������������ ����" required="true" awindex="true" euflag="7" />
+      <E name="���_���_���" datatype="money" index="true" displayname="��� ��� ���" value="iif( �������_������� , Sum( �������|S1|�����_�������_���_���    ) ,  ���_���_���  )" />
+      <E name="���_�_���" datatype="money" index="true" displayname="��� � ���" required="false" value="iif( �������_������� , Sum( �������|S1|�����_�������_�_���  ) ,���_�_��� )" requiredex=" ��������_�_��� =&quot;&quot;" />
+      <E name="������" datatype="dictionary(������,text)@������������" index="true" dictpath="" edit="droplist" default="&quot;���������� �����&quot;" />
+      <E name="��������_���_������" datatype="dictionary(������,text)@�������� ���" index="true" displayname="�������� ��� ������" dictpath="" required="false" edit="textbox" default="&quot;643&quot;" view="invisible" />
+      <E name="���_������" datatype="dictionary(������,text)@������" index="true" displayname="��� ������" dictpath="" required="false" default="&quot;RUB&quot;" view="invisible" />
+      <E name="�������������_���������" datatype="boolean" index="true" displayname="������������� ���������" default="0" />
+      <E name="���_�������" datatype="dictionary(��� �������,text)" index="true" displayname="��� �������" />
+      <E name="����_�������_�_�������_�����" datatype="money" index="true" displayname="���� ������� � ������� �����" />
+      <E name="����_�������_��������_������" datatype="money" index="true" displayname="���� ������� �������� ������" />
+      <E name="���_����_������������" datatype="dictionary(��� ���� ������������,text)" index="true" displayname="��� ���� ������������" edit="textbox" />
+      <E name="���_����������_���������" datatype="dictionary(��� ���������� ���������,text)" index="true" displayname="��� ���������� ���������" edit="textbox" />
+      <E name="��������_��������������_�������" datatype="dictionary(�������� ��������������,longtext)" index="true" displayname="�������� �������������� �������" edit="textbox" />
+      <E name="�����_����" datatype="text" index="true" displayname="����� ����" />
+      <E name="�����_�������" datatype="text" index="true" displayname="����� �������" />
+      <S name="�����������_��������" displayname="����������� ��������">
+        <E name="�����������_��������_������������" datatype="longtext" index="true" dictpath="" required="true" displayname="����������� �������� ������������" absettings="&lt;ROOT title=&quot;����������� ��������&quot; IsMultiple=&quot;False&quot; CanSelectNobody=&quot;False&quot; SelectedUser=&quot;False&quot; SelectedGroup=&quot;False&quot; SelectedDepartments=&quot;False&quot;&gt;&lt;DateDictionary Name=&quot;Departments&quot; DisplayName=&quot;��������� �����������&quot; /&gt;&lt;/ROOT&gt;" edit="textbox" abdata="Name" extype="addressbook" />
+        <E name="�����������_��������" datatype="integer" index="true" displayname="����������� ��������" required="false" dictpath="" view="invisible" extype="addressbook" abdata="Id" />
+        <E name="�����������_��������_���" datatype="text" index="true" displayname="�����������_��������_���" extype="addressbook" abdata="INN" />
+        <E name="�����������_��������_�����" datatype="longtext" index="true" displayname="�����������_��������_�����" extype="addressbook" abdata="�����" />
+        <E name="�����������_��������_����������_���" datatype="text" index="true" />
+        <E name="�����������_��������_���" datatype="text" index="true" displayname="�����������_��������_���" extype="addressbook" abdata="KPP" />
+        <E name="�����������_��������_����" datatype="text" index="true" displayname="�����������_��������_����" extype="addressbook" abdata="OGRN" />
+        <E name="��_���������_��_���" datatype="text" index="true" displayname="�� ��������� �� ���" />
+        <E name="�����������_��������_���" datatype="text" index="true" displayname="�����������_�������� ���" extype="addressbook" abdata="EISCode223" />
+      </S>
+      <S name="�������������_���������" displayname="������������� ���������">
+        <E name="�������������_���������_������������" datatype="text" index="true" displayname="������������� ��������� ������������" required="true" dictpath="" edit="tool(CallTools.AddressBookTool)" absettings="&lt;ROOT title=&quot;����������� �������&quot; IsMultiple=&quot;False&quot; CanSelectNobody=&quot;False&quot; SelectedUser=&quot;False&quot; SelectedGroup=&quot;False&quot; SelectedDepartments=&quot;True&quot;&gt;&lt;DateDictionary Name=&quot;Departments&quot; DisplayName=&quot;��������� �����������&quot; /&gt;&lt;/ROOT&gt;" abdata="Name" />
+        <E name="�������������_���������" datatype="integer" index="true" displayname="������������� ���������" required="false" dictpath="" edit="textbox" abdata="Id" extype="addressbook" view="invisible" />
+      </S>
