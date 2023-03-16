@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+	Описание файла: https://cgnjira.cognitive.ru:8444/pages/viewpage.action?pageId=30835016
+	и в задаче https://cgnjira.cognitive.ru:8443/browse/ETPZAK-420
+-->
+
+ 
+<Buttons>
+	<Location name="PlanningMenu">
+		
+		<Button name="Создать таблицу распределения" displayName="Создать новый документ">
+			<Action type="Register">
+				<FlowName value="Таблица Председателей" />
+			</Action>
+			<Visibility>
+				<Rules>
+					<And>
+						<WhenHttpGetParamEquals param="searchType" value="DistributionOfManagers" />
+						<WhenHttpGetParamEquals param="searchBlock" value="Распределение зам. Пред." />
+					</And>
+				</Rules>
+			</Visibility>
+		</Button>
+
+		<Button name="Создать новый документ" displayName="Создать новый документ">
+			<Action type="Register">
+				<FlowName value="Заявки участников 223ФЗ" />
+			</Action>
+			<Visibility>
+				<Rules>
+					<And>
+						<WhenHttpGetParamEquals param="searchBlock" value="Учебный раздел" />
+					</And>
+				</Rules>
+			</Visibility>
+		</Button>
+		
+		<Button name="Новый план" displayName="Сформировать план">
+			<Action type="Register" beforeSubmitJs="checkOpenFormPossible">
+				<View name="CreatePlan"/>       
+				<Parameters>
+					<Parameter name="planFlowName" value="Планы закупок 223ФЗ"/>
+				</Parameters> 
+			</Action>
+			<Visibility>
+				<Rules>
+					<And>
+						<And>
+							<WhenHttpGetParamEquals param="searchType" value="PlanPablik223" />
+							<WhenHttpGetParamEquals param="searchBlock" value="Планы закупок"/>
+						</And>
+						<Or>
+							<WhenUserInWorkGroup name="Специалист по закупкам"/>
+						</Or>
+					</And>
+				</Rules>
+			</Visibility>
+		</Button> 
