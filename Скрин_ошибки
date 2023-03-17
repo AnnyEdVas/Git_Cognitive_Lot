@@ -1,0 +1,65 @@
+2023-03-17 09:09:38.6383|WARN|CtDK.ServiceModel.ExceptionToFaultConversionBehaviorAttribute+ErrorHandler|Не удалось преобразовать исключение System.Reflection.TargetInvocationException к отказу SOA. Детали исключения: System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+
+   at Cognitive.Licensing.ProductLicenser.GetLicenseCount() in C:\BuildAgent\work\d1f712475567d90c\sources\SRC\License\Cognitive.Licensing\ProductLicenser.cs:line 195
+
+   at Cognitive.Docflow.Security.Wrappers.ProductLicenserWrapper.GetLicenseCount() in C:\BuildAgent\work\d1f712475567d90c\sources\SRC\server15\DFSecurity\Wrappers\ProductLicenserWrapper.cs:line 34
+
+   at Cognitive.Docflow.Security.SecureContext.SContext.Invoke(Object target, MethodBase method, Object[] arguments) in C:\BuildAgent\work\d1f712475567d90c\sources\SRC\server15\DFSecurity\SecureContext\SContextMethods.cs:line 131
+
+   at Cognitive.Docflow.Security.SecureContext.SContext.GetResult() in C:\BuildAgent\work\d1f712475567d90c\sources\SRC\server15\DFSecurity\SecureContext\SContextGeneralFields.cs:line 255
+
+   at Cognitive.Docflow.Security.Wrappers.VerifyScope.InvokeMethod() in C:\BuildAgent\work\d1f712475567d90c\sources\SRC\server15\DFSecurity\Wrappers\UnsafeContextScope.cs:line 201
+
+   at Cognitive.Docflow.Security.Wrappers.SecurityBase.WrapMethodCall(MethodBase method, Object[] arguments, String policy) in C:\BuildAgent\work\d1f712475567d90c\sources\SRC\server15\DFSecurity\Wrappers\SecurityBase.cs:line 75
+
+   at Cognitive.Docflow.Security.Wrappers.ProductLicenserWrapper#Container.GetLicenseCount()
+
+   at Cognitive.Docflow.WebService.Sessions.GetNamedLicenseData() in C:\BuildAgent\work\d1f712475567d90c\sources\SRC\server15\WebServer\Sessions.svc.cs:line 561
+
+   --- End of inner exception stack trace ---
+
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+
+   at Cognitive.Docflow.Transactions.Transaction.raiseWorkExceptionAndSetComplete(Exception e) in C:\BuildAgent\work\d1f712475567d90c\sources\SRC\server15\DFEnvironment\Transaction.cs:line 1179
+
+   at Cognitive.Docflow.Transactions.Transaction.InvokeTran(Delegate m_ItemsMethod, Object[] m_args) in C:\BuildAgent\work\d1f712475567d90c\sources\SRC\server15\DFEnvironment\Transaction.cs:line 1148
+
+   at Cognitive.Docflow.Transactions.Transaction.InvokeInternal(Delegate del, Object[] p) in C:\BuildAgent\work\d1f712475567d90c\sources\SRC\server15\DFEnvironment\Transaction.cs:line 1343
+
+   at Cognitive.Docflow.Transactions.Transaction.<>c__DisplayClass156_0.<Invoke>b__0() in C:\BuildAgent\work\d1f712475567d90c\sources\SRC\server15\DFEnvironment\Transaction.cs:line 1295
+
+   at System.Security.Principal.WindowsIdentity.<>c__DisplayClass67_0`1.<RunImpersonated>b__0()
+
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+
+--- End of stack trace from previous location ---
+
+   at System.Security.Principal.WindowsIdentity.RunImpersonatedInternal(SafeAccessTokenHandle token, Action action)
+
+   at System.Security.Principal.WindowsIdentity.RunImpersonated[T](SafeAccessTokenHandle safeAccessTokenHandle, Func`1 func)
+
+   at Cognitive.Docflow.Transactions.Transaction.Invoke(Delegate del, Object[] p) in C:\BuildAgent\work\d1f712475567d90c\sources\SRC\server15\DFEnvironment\Transaction.cs:line 1293
+
+   at Cognitive.Docflow.Transactions.Transaction.Invoke(Delegate del, Object[] p) in C:\BuildAgent\work\d1f712475567d90c\sources\SRC\server15\DFEnvironment\Transaction.cs:line 1309
+
+   at Cognitive.Docflow.WebService.CreateTransactionOperationInvoker.InvokeAsync(Object instance, Object[] inputs) in C:\BuildAgent\work\d1f712475567d90c\sources\SRC\server15\WebServer\CreateTransactionOperationInvoker.cs:line 242
+
+   at Cognitive.Docflow.WebService.CreateTransactionOperationInvoker.InvokeAsync(Object instance, Object[] inputs) in C:\BuildAgent\work\d1f712475567d90c\sources\SRC\server15\WebServer\CreateTransactionOperationInvoker.cs:line 257
+
+   at CoreWCF.Dispatcher.DispatchOperationRuntime.<>c__DisplayClass68_0.<<InvokeAsync>b__0>d.MoveNext()
+
+--- End of stack trace from previous location ---
+
+   at CoreWCF.Dispatcher.DispatchOperationRuntime.InvokeAsync(MessageRpc rpc)
+
+   at CoreWCF.Dispatcher.DispatchOperationRuntime.InvokeAsync(MessageRpc rpc)
+
+   at CoreWCF.Dispatcher.ImmutableDispatchRuntime.ProcessMessageAsync(MessageRpc rpc)
+
+   at CoreWCF.Dispatcher.MessageRpc.ProcessAsync(Boolean isOperationContextSet)
